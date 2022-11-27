@@ -1,10 +1,18 @@
 import { useState, useEffect } from 'react';
-import { FlexBox, FlexList, TrendHeder, SectionBox } from './HomeRender.styled';
+import { useLocation } from 'react-router-dom';
+import {
+  FlexBox,
+  FlexList,
+  TrendHeder,
+  SectionBox,
+  StyledLink,
+} from './HomeRender.styled';
 import * as API from '../Services/Api';
 
 export const HomeRernder = () => {
   const [films, setFilms] = useState([]);
   const baseURL = 'https://image.tmdb.org/t/p/w200';
+  const location = useLocation();
 
   useEffect(() => {
     const renderTopFilms = async () => {
@@ -26,8 +34,10 @@ export const HomeRernder = () => {
         {films.map(({ title, id, poster_path }) => {
           return (
             <FlexList key={id}>
-              <img src={baseURL + poster_path} alt="Poster " />
-              <p>{title}</p>
+              <StyledLink to={`/movies/${id}`} state={{ from: location }}>
+                <img src={baseURL + poster_path} alt="Poster" />
+                <p>{title}</p>
+              </StyledLink>
             </FlexList>
           );
         })}

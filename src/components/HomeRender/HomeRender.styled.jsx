@@ -1,4 +1,5 @@
 import styled from '@emotion/styled';
+import { NavLink } from 'react-router-dom';
 
 export const SectionBox = styled.main`
   display: block;
@@ -22,4 +23,17 @@ export const FlexList = styled.li`
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
+`;
+export const StyledLink = styled(NavLink)`
+  color: black;
+  font-size: 15px;
+  font-weight: 700;
+  text-decoration: none;
+  &.active {
+    color: #0a0809;
+  }
+  :hover:not(.active),
+  :focus-visible:not(.active) {
+    color: #c0c0c0;
+  }
 `;
