@@ -1,5 +1,11 @@
 import styled from '@emotion/styled';
 
+export const SectionBox = styled.main`
+  display: block;
+
+  margin: 0;
+  padding: 10px;
+`;
 export const TrendHeder = styled.h2`
   text-align: center;
 `;

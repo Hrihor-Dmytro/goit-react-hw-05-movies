@@ -5,12 +5,14 @@ export const HomeBar = () => {
   return (
     <HederBox>
       <NavigationLink>
-        <Link to="/" end>
-          Home
-        </Link>
-        <Link to="/movies">Movies</Link>
-        <Outlet />
+        <nav>
+          <Link to="/" end>
+            Home
+          </Link>
+          <Link to="/movies">Movies</Link>
+        </nav>
       </NavigationLink>
+      <Outlet />
     </HederBox>
   );
 };

@@ -1,16 +1,18 @@
 import styled from '@emotion/styled';
 import { NavLink } from 'react-router-dom';
 
-export const HederBox = styled.section`
-  display: fle;
+export const HederBox = styled.div`
+  margin: 0;
+  padding: 0;
 `;
 
-export const NavigationLink = styled.nav`
+export const NavigationLink = styled.header`
   display: block;
-
+  text-align: center;
   font-size: 24px;
   font-weight: bold;
-  margin: auto;
+  margin: 0;
+  padding: 10px;
 `;
 
 export const Link = styled(NavLink)`
