@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { FlexBox, FlexList, TrendHeder } from './HomeRender.styled';
 import * as API from '../Services/Api';
 
 export const HomeRernder = () => {
@@ -19,17 +20,17 @@ export const HomeRernder = () => {
   }, []);
   return (
     <div>
-      <div>Trending today</div>
-      <div>
+      <TrendHeder>Trending today</TrendHeder>
+      <FlexBox>
         {films.map(({ title, id, poster_path }) => {
           return (
-            <div key={id}>
+            <FlexList key={id}>
               <img src={baseURL + poster_path} alt="Poster " />
-              <div>{title}</div>
-            </div>
+              <p>{title}</p>
+            </FlexList>
           );
         })}
-      </div>
+      </FlexBox>
     </div>
   );
 };
