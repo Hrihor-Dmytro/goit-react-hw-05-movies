@@ -1,7 +1,13 @@
 import * as API from '../Services/Api';
 import { useState, useEffect } from 'react';
 import { useSearchParams } from 'react-router-dom';
-import { FormElement, FormField, Button, InfoHeader } from './Movies.styled';
+import {
+  FormElement,
+  FormField,
+  Button,
+  InfoHeader,
+  MainBox,
+} from './Movies.styled';
 import { Formik } from 'formik';
 import { MovieList } from './MovieList';
 
@@ -42,7 +48,7 @@ export const Movies = () => {
   };
 
   return (
-    <main>
+    <MainBox>
       <h1>Movies</h1>
       <Formik
         initialValues={{ searchQuery: searchParams.get('query') || '' }}
@@ -67,6 +73,6 @@ export const Movies = () => {
         <InfoHeader>'Nothing found =( '</InfoHeader>
       )}
       <MovieList films={movies} />
-    </main>
+    </MainBox>
   );
 };

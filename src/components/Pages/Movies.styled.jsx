@@ -5,30 +5,31 @@ export const FormElement = styled(Form)`
   display: flex;
   gap: 30px;
   margin-bottom: 30px;
-  border: #0095ff;
 `;
 export const FormField = styled(Field)`
   width: 300px;
   height: 20px;
-  border-radius: 15px;
-  border: #0095ff;
+  border-radius: 10px;
+  border: 2px solid #000000;
   outline-color: #009dff;
-  border: none;
   padding: 10px;
   font-weight: 500;
   font-size: 20px;
-  color: #00aeff;
+  color: #000000;
+  &::placeholder {
+    color: #000000;
+  }
 `;
 
 export const Button = styled.button`
   display: inline-block;
   width: 120px;
-  height: 40px;
+  height: 45px;
   position: relative;
   border: 0;
   opacity: 0.6;
-  border: #0095ff;
-  border-radius: 15px;
+  border: 2px solid #000000;
+  border-radius: 10px;
   background-color: #0095ff;
   color: #000000;
   cursor: pointer;
@@ -43,5 +44,12 @@ export const InfoHeader = styled.p`
   font-weight: 700;
   margin-bottom: 10px;
   margin-left: 10px;
-  color: #570434;
+  color: #ff0000;
+`;
+
+export const MainBox = styled.main`
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  flex-direction: column;
 `;
