@@ -72,11 +72,10 @@ export const Movies = () => {
           </FormElement>
         )}
       </Formik>
-      {movies.lenght === 0 && isLoading && (
-        <InfoHeader>Sorry, nothing found...</InfoHeader>
+      {isLoading && movies.length === 0 && (
+        <InfoHeader> Sorry, nothing found...</InfoHeader>
       )}
       <MovieList films={movies} />
-      {movies.length === 0 && <InfoHeader> Sorry, nothing found...</InfoHeader>}
     </MainBox>
   );
 };
