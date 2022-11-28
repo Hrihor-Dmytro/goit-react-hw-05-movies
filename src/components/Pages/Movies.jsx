@@ -16,9 +16,6 @@ export const Movies = () => {
   const [searchParams, setSearchParams] = useSearchParams();
   const [isLoading, setIsLoading] = useState(false);
 
-  console.log(movies.length);
-  console.log(searchParams);
-
   useEffect(() => {
     const userQuery = searchParams.get('query');
     if (userQuery) {
