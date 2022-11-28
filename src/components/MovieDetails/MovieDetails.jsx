@@ -3,6 +3,7 @@ import * as API from '../Services/Api';
 import { useState, useEffect, Suspense } from 'react';
 import { LinkBtn, AddInfoItemLink } from './MovieDetails.styled';
 import { InfoMovie } from '../InfoMovie/InfoMovie';
+import { HiArrowLeft } from 'react-icons/hi';
 
 export const MovieDetails = id => {
   const [movie, setMovie] = useState(null);
@@ -27,7 +28,10 @@ export const MovieDetails = id => {
     <>
       {movie && (
         <section>
-          <LinkBtn to={from}>Go back</LinkBtn>
+          <LinkBtn to={from}>
+            <HiArrowLeft size="24" />
+            Go back
+          </LinkBtn>
           <InfoMovie info={movie}></InfoMovie>
           <div>
             <p> Additional information</p>

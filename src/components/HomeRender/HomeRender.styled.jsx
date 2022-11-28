@@ -15,16 +15,17 @@ export const FlexBox = styled.ul`
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
-  align-items: center;
+  align-items: flex-start;
 `;
 export const FlexList = styled.li`
-  max-width: 200px;
+  width: 200px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
 `;
 export const StyledLink = styled(NavLink)`
+  text-align: center;
   color: black;
   font-size: 15px;
   font-weight: 700;
@@ -36,4 +37,9 @@ export const StyledLink = styled(NavLink)`
   :focus-visible:not(.active) {
     color: #c0c0c0;
   }
+`;
+
+export const ImgBox = styled.img`
+  width: 200px;
+  height: 300px;
 `;

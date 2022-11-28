@@ -6,6 +6,7 @@ import {
   TrendHeder,
   SectionBox,
   StyledLink,
+  ImgBox,
 } from './HomeRender.styled';
 import * as API from '../Services/Api';
 
@@ -35,7 +36,7 @@ export const HomeRernder = () => {
           return (
             <FlexList key={id}>
               <StyledLink to={`/movies/${id}`} state={{ from: location }}>
-                <img src={baseURL + poster_path} alt="Poster" />
+                <ImgBox src={baseURL + poster_path} alt="Poster" />
                 <p>{title}</p>
               </StyledLink>
             </FlexList>
