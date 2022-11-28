@@ -1,3 +1,5 @@
+import { InfoBox } from './InfoMovie.styled';
+
 export const InfoMovie = ({ info }) => {
   const {
     poster_path,
@@ -14,7 +16,7 @@ export const InfoMovie = ({ info }) => {
   const getScor = () => Math.round(`${vote_average}` * 10);
 
   return (
-    <div>
+    <InfoBox>
       <img
         src={
           poster_path
@@ -31,9 +33,9 @@ export const InfoMovie = ({ info }) => {
         <p>User Score : {getScor()}%</p>
         <h3>Overview </h3>
         <p>{overview}</p>
-        <p>Genres</p>
+        <h3>Genres</h3>
         <p>{genres.map(genre => genre.name).join(', ')}</p>
       </div>
-    </div>
+    </InfoBox>
   );
 };

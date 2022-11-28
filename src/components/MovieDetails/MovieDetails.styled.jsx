@@ -8,7 +8,7 @@ export const LinkBtn = styled(NavLink)`
   font-size: 30px;
   color: black;
   :hover {
-    color: #c0c0c0;
+    color: #008cff;
   }
 `;
 

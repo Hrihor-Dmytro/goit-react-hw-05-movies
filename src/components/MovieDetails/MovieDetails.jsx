@@ -30,11 +30,11 @@ export const MovieDetails = id => {
         <section>
           <LinkBtn to={from}>
             <HiArrowLeft size="24" />
-            Go back
+            back to...
           </LinkBtn>
           <InfoMovie info={movie}></InfoMovie>
           <div>
-            <p> Additional information</p>
+            <p>Additional information</p>
             <div>
               <ul>
                 <li>
