@@ -8,7 +8,7 @@ export const LinkBtn = styled(NavLink)`
   font-size: 30px;
   color: black;
   :hover {
-    color: #008cff;
+    color: #0095ff;
   }
 `;
 
@@ -18,6 +18,17 @@ export const AddInfoItemLink = styled(NavLink)`
   text-decoration: none;
   color: #000000;
   :hover {
-    color: #008cff;
+    color: #0095ff;
   }
+`;
+
+export const MoviDetailsHeader = styled.h2`
+  font-size: 30px;
+`;
+
+export const InfoList = styled.ul`
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  border-bottom: 3px solid rgba(47, 47, 44, 0.852);
 `;

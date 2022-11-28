@@ -11,7 +11,7 @@ export const FormField = styled(Field)`
   height: 20px;
   border-radius: 10px;
   border: 2px solid #000000;
-  outline-color: #009dff;
+  outline-color: #0095ff;
   padding: 10px;
   font-weight: 500;
   font-size: 20px;

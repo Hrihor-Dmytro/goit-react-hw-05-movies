@@ -1,19 +1,21 @@
 import { useLocation } from 'react-router-dom';
-import { StyledLink } from './MovieList.styled';
+import { StyledLink, MowieBox, MowieList } from './MovieList.styled';
 export const MovieList = ({ films }) => {
   const location = useLocation();
+  const baseURL = 'https://image.tmdb.org/t/p/w200';
 
   return (
-    <ul>
-      {films.map(({ title, id }) => {
+    <MowieBox>
+      {films.map(({ title, id, poster_path }) => {
         return (
-          <li key={id}>
+          <MowieList key={id}>
             <StyledLink to={`/movies/${id}`} state={{ from: location }}>
-              {title}
+              <img src={baseURL + poster_path} alt="Poster..." />
+              <h2>{title}</h2>
             </StyledLink>
-          </li>
+          </MowieList>
         );
       })}
-    </ul>
+    </MowieBox>
   );
 };

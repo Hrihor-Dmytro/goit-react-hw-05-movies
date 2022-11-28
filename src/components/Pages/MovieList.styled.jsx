@@ -13,3 +13,14 @@ export const StyledLink = styled(NavLink)`
     color: #000000;
   }
 `;
+export const MowieBox = styled.ul`
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-around;
+`;
+export const MowieList = styled.li`
+  display: flex;
+
+  width: 200px;
+`;

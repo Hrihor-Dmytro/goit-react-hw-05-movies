@@ -1,4 +1,9 @@
-import { InfoBox } from './InfoMovie.styled';
+import {
+  InfoBox,
+  InfoText,
+  InfoHederTu,
+  InfoHederTry,
+} from './InfoMovie.styled';
 
 export const InfoMovie = ({ info }) => {
   const {
@@ -27,14 +32,14 @@ export const InfoMovie = ({ info }) => {
         width="300"
       />
       <div>
-        <h2>
+        <InfoHederTry>
           {original_title} ({getYear()})
-        </h2>
-        <p>User Score : {getScor()}%</p>
-        <h3>Overview </h3>
-        <p>{overview}</p>
-        <h3>Genres</h3>
-        <p>{genres.map(genre => genre.name).join(', ')}</p>
+        </InfoHederTry>
+        <InfoText>User Score : {getScor()}%</InfoText>
+        <InfoHederTu>Overview </InfoHederTu>
+        <InfoText>{overview}</InfoText>
+        <InfoHederTu>Genres</InfoHederTu>
+        <InfoText>{genres.map(genre => genre.name).join(', ')}</InfoText>
       </div>
     </InfoBox>
   );

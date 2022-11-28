@@ -16,6 +16,9 @@ export const Movies = () => {
   const [searchParams, setSearchParams] = useSearchParams();
   const [isLoading, setIsLoading] = useState(false);
 
+  console.log(movies.length);
+  console.log(searchParams);
+
   useEffect(() => {
     const userQuery = searchParams.get('query');
     if (userQuery) {
@@ -69,10 +72,11 @@ export const Movies = () => {
           </FormElement>
         )}
       </Formik>
-      {movies.lenght === 0 && searchParams.get('query') && isLoading && (
-        <InfoHeader>'Nothing found =( '</InfoHeader>
+      {movies.lenght === 0 && isLoading && (
+        <InfoHeader>Sorry, nothing found...</InfoHeader>
       )}
       <MovieList films={movies} />
+      {movies.length === 0 && <InfoHeader> Sorry, nothing found...</InfoHeader>}
     </MainBox>
   );
 };

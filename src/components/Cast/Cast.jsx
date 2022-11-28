@@ -2,6 +2,7 @@ import PropTypes from 'prop-types';
 import { useState, useEffect } from 'react';
 import * as API from '../Services/Api';
 import { useParams } from 'react-router-dom';
+import { CastBox, CastList } from './Cast.styled';
 
 export const Cast = () => {
   const { movieId } = useParams();
@@ -28,10 +29,10 @@ export const Cast = () => {
   }
 
   return (
-    <ul>
+    <CastBox>
       {cast.map(({ profile_path, name, character, id }) => {
         return (
-          <li key={id}>
+          <CastList key={id}>
             <img
               src={
                 profile_path
@@ -45,10 +46,10 @@ export const Cast = () => {
               <p>{name}</p>
               <p>Character: {character}</p>
             </div>
-          </li>
+          </CastList>
         );
       })}
-    </ul>
+    </CastBox>
   );
 };
 

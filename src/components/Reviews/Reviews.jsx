@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import { useState, useEffect } from 'react';
 import * as API from '../Services/Api';
 import { useParams } from 'react-router-dom';
-
+import { RewiewsHeader, RewiewsList, RewiewsBox } from './Rewiews.styled';
 export const Reviews = () => {
   const [reviews, setReviews] = useState([]);
   const { movieId } = useParams();
@@ -26,14 +26,14 @@ export const Reviews = () => {
   }
 
   return (
-    <ul>
+    <RewiewsBox>
       {reviews.map(({ id, author, content }) => (
-        <li key={id}>
-          <p>Author: {author}</p>
+        <RewiewsList key={id}>
+          <RewiewsHeader>Author: {author}</RewiewsHeader>
           <p>{content}</p>
-        </li>
+        </RewiewsList>
       ))}
-    </ul>
+    </RewiewsBox>
   );
 };
 

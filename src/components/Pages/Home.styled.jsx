@@ -13,6 +13,7 @@ export const NavigationLink = styled.header`
   font-weight: bold;
   margin: 0;
   padding: 10px;
+  border-bottom: 3px solid rgba(47, 47, 44, 0.852);
 `;
 
 export const Link = styled(NavLink)`
@@ -25,6 +26,6 @@ export const Link = styled(NavLink)`
   font-size: 30px;
   &.active {
     color: white;
-    background-color: #00a6ff;
+    background-color: #0095ff;
   }
 `;

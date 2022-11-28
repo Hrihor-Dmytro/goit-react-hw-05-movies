@@ -1,7 +1,12 @@
 import { useParams, useLocation, Outlet } from 'react-router-dom';
 import * as API from '../Services/Api';
 import { useState, useEffect, Suspense } from 'react';
-import { LinkBtn, AddInfoItemLink } from './MovieDetails.styled';
+import {
+  LinkBtn,
+  AddInfoItemLink,
+  InfoList,
+  MoviDetailsHeader,
+} from './MovieDetails.styled';
 import { InfoMovie } from '../InfoMovie/InfoMovie';
 import { HiArrowLeft } from 'react-icons/hi';
 
@@ -34,9 +39,9 @@ export const MovieDetails = id => {
           </LinkBtn>
           <InfoMovie info={movie}></InfoMovie>
           <div>
-            <p>Additional information</p>
+            <MoviDetailsHeader>Additional information</MoviDetailsHeader>
             <div>
-              <ul>
+              <InfoList>
                 <li>
                   <AddInfoItemLink to="cast" state={{ from }}>
                     Cast
@@ -47,7 +52,7 @@ export const MovieDetails = id => {
                     Reviews
                   </AddInfoItemLink>
                 </li>
-              </ul>
+              </InfoList>
             </div>
             <Suspense fallback={<div>Loading...</div>}>
               <Outlet />
